@@ -1,8 +1,8 @@
-import { Card, CardContent, Container, Grid, Typography, Box } from '@mui/material';
+import { Card, CardContent, Container, Grid, Typography } from '@mui/material';
 import Joi from 'joi';
 import FormBuilder from '../components/Form';
 
-const UserForm = (user = {}) => {
+const UserForm = () => {
 	const defaultValues = {
 		id: '1',
 		nationality: '',
@@ -24,10 +24,6 @@ const UserForm = (user = {}) => {
 			.label('Email'),
 		users: Joi.any()
 	});
-
-	// const schema = Joi.object({
-	// 	users: Joi.array().items(userSchema),
-	// });
 
 	const formBuilderOptions = {
 		listName,
