@@ -2,6 +2,8 @@ import { Card, CardContent, Container, Grid, Typography } from '@mui/material';
 import Joi from 'joi';
 import FormBuilder from '../components/Form';
 
+// THIS SAMPLE IS FOR NON ARRAY DATA
+
 const UserForm = () => {
 	const defaultValues = {
 		id: '1',
@@ -22,7 +24,7 @@ const UserForm = () => {
 			.email({ tlds: { allow: false } })
 			.required()
 			.label('Email'),
-		users: Joi.any()
+		users: Joi.any() // IMPORTANT: if it's single object and not array, add this in the Joi schema
 	});
 
 	const formBuilderOptions = {
